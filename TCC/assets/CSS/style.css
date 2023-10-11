@@ -1,0 +1,44 @@
+html, body{
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.bar{
+    background-color: #8fff92;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.barTitle, .barSubTitle{
+    margin: 0;
+}
+
+.card{
+    display: flex;
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10%;
+    margin-top: 20%;
+    
+    
+}
+
+/* Ocultar opções */
+
+.hidden{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+

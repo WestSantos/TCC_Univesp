@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Prototipo TCC</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='./assets/CSS/style.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src='./assets/JS/script.js'></script>
+</head>
+<body>
+    <header>
+        <div class="bar">
+            <h2 class="barTitle">ST - Segurança do Trabalho</h2>
+            <h3 class="barSubTitle">Geração de Relatórios</h3>
+        </div>
+    </header>
+
+
+    <main>
+        <section>
+
+            <div class="quadro-login" id="PagLog">      
+                <div class="card" style="padding: 25px;">
+                    <h2>Login</h2>
+                        <label for="usuario" class="form-label"><b>Usuario:</b></label>
+                        <input type="text" name="usuario" id="usuario" class="usuario" placeholder="Digite o seu E-Mail..." required>
+                    <br>
+                        <label for="senha" class="form-label"><b>Senha:</b></label>
+                        <input type="password" name="senha" id="senha" class="senha" placeholder="Digite sua Senha..." required>
+                    <br> 
+                        <input type="submit" onclick="logar()" id="btn-login" class="btn btn-success">
+                        <br>
+                        <input type="submit" value="Cadastro" onclick="cadastrar()" id="btn-cadastrar" class="btn btn-success">
+                </div>
+           
+            </div>
+
+
+            <div class="cadastro hidden" id="PgCad">
+                  
+                    <div class="card" style="padding: 25px;">
+                        <h2>Cadastro</h2>
+                            <label for="usuario" class="form-label"><b>Nome</b></label>
+                            <input type="text" name="usuario" id="nomes" class="usuario" placeholder="Digite o seu Nome..." required>
+                        <br>
+                            <label for="email" class="form-label"><b>Email</b></label>
+                            <input type="text" name="Email" id="Email" class="Email" placeholder="Digite o seu E-mail..." required>
+                        <br>
+                            <label for="senha" class="form-label"><b>Senha</b></label>
+                            <input type="password" name="senha" id="senha" class="senha" placeholder="Digite sua Senha..." required>
+                        <br>
+                            <input type="submit" value="Confirmar" onclick="salvarCadastro()" id="btn-salvarCadastro" class="btn btn-success">
+                    </div>
+             
+            </div>
+
+            <div class="relatorio hidden" id="PgRel">
+                <div class="card" style="padding: 25px;">
+                    <h2>Relatório</h2>
+                    <h4>Informações</h4>
+                    
+                    <label for="date">Data e Hora:</label>
+                    <input type="datetime-local">
+                <br>
+                    <label for="Report" class="form-label">Reportado por:</label>
+                    <input type="text" name="report" id="report" class="report" required>
+                <br>
+                    <label for="empresa" class="form-label">Empresa:</label>
+                    <input type="text" name="empresa" id="empresa" class="empresa" required>
+                <br>
+                    <label for="setor" class="form-label">Setor:</label>
+                    <input type="text" name="setor" id="setor" class="setor" required>
+                <br>
+                    <label for="project" class="form-label">Nome do Projeto:</label>
+                    <input type="text" name="ptoject" id="project" class="project" required>
+                <br>
+                <input type="submit" value="Next" onclick="next()" id="btn-continuarRelatorio" class="btn btn-success">
+
+
+                </div>
+
+            </div>
+
+            <div class="relatorio2 hidden" id="PgRel2">
+                <div class="card" style="padding: 25px;">
+                <label for="situacao" class="form-label">Descreva a situação:</label>
+                <textarea type="situacao" name="situacao" id="situacao" class="situacao" required>
+                </textarea>
+            <br>
+                <label for="sugestao" class="form-label">Sugestão:</label>
+                <textarea type="sugestao" name="sugestao" id="sugestao" class="sugestao" required>
+                </textarea>
+            <br>
+                <label for="foto" class="form-label">Anexar fotos:</label>
+                <input type="file" value="Enviar uma foto" id="" class="">
+            <br>
+                <input type="file" value="Enviar uma foto" id="" class="">
+            <br>
+                <input type="file" value="Enviar uma foto" id="" class="">
+            <br>
+                <input type="submit" value="Salvar Relatório" onclick="Salvar()" id="btn-salvarRelatorio" class="btn btn-success">
+            <br>
+                <input type="submit" value="Enviar Relatório" onclick="Enviar()" id="btn-enviarRelatorio" class="btn btn-success">
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
