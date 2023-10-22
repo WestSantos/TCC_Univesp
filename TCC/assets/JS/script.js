@@ -1,14 +1,13 @@
 
+
+
 function logar(){
-    let qlogin = document.getElementById('PagLog')
+    let Relatorio = document.getElementById('PgRel');
+    let qlogin = document.getElementById('PagLog');
     // let buttom = document.getElementById('btn-login')
-    let Relatorio = document.getElementById('PgRel')
     let nomes = document.getElementById('usuario').value;
     let senha = document.getElementById('senha').value;
-
-    console.log(nomes)
-    console.log(senha)
-
+    
     if (nomes=="admin" && senha=="admin"){
         hidden(qlogin);
        
@@ -20,17 +19,24 @@ function logar(){
 
 }
 
-function hidden(ocutar){
 
-  ocutar.classList.add('hidden');
+function hidden(ocutar){
+   
+    ocutar.classList.add('hidden');
     
 }
+
 
 function mostrar(show){
     show.classList.remove('hidden');
     show.classList.add('show');
 }
 
-function next(){
-    
+
+function next(id){
+    id.classList.remove('show');
+    let Relatorio2 = document.getElementById('PgRel2');
+    hidden(id);  
+    mostrar(Relatorio2);
+
 }
